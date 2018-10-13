@@ -21,9 +21,6 @@ phn = ['sil', 'aa', 'ae', 'ah', 'ao', 'aw', 'ax', 'ax-h', 'ay', 'b', 'ch', 'd', 
 
 import os
 import argparse
-import glob
-import sys
-import sklearn
 import numpy as np
 import scipy.io.wavfile as wav
 from sklearn import preprocessing
