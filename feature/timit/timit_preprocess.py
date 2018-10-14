@@ -51,7 +51,8 @@ def wav2feature(rootdir, save_directory, mode, feature_len, level, keywords, win
                 try:
                     (rate,sig)= wav.read(fullFilename)
                 except ValueError as e:
-                    if e.message == "File format 'NIST'... not understood.":
+                    print(e)
+                    if e == "File format 'NIST'... not understood.":
                         print('You should use nist2wav.sh to convert NIST format files to WAV files first, nist2wav.sh is in core folder.')
                         return
                 feat = calcfeat_delta_delta(sig,rate,win_length=win_len,win_step=win_step,mode=mode,feature_len=feature_len)
