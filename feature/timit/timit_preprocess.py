@@ -50,6 +50,7 @@ def wav2feature(rootdir, save_directory, mode, feature_len, level, keywords, win
                 sig = None
                 try:
                     (rate,sig)= wav.read(fullFilename)
+                    print(rate)
                 except ValueError as e:
                     print(e)
                     if e == "File format 'NIST'... not understood.":
